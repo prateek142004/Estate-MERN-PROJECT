@@ -1,0 +1,70 @@
+@use './responsive.scss';
+
+.homepage{
+    display: flex;
+    height: 100%;
+    .textcontainer{
+        flex: 3;
+        .text{
+            padding-right: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+            height: 100%;
+            @include responsive.md{
+                padding: 0%;
+            }
+
+            @include responsive.sm{
+                justify-content: flex-start;
+            }
+
+            .title{
+                font-size: 50px;
+                @include responsive.lg{
+                font-size: 48px;
+            }
+            }
+
+            .boxes{
+                display: flex;
+                justify-content: space-between;
+
+                @include responsive.sm{
+                display: none;
+            }
+
+                h1{
+                    font-size: 24px;
+                    @include responsive.lg{
+                font-size: 32px;
+            }
+                }
+                h2{
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+    }
+    .imgcontainer{
+        flex: 2;
+        background-color: #fcf5f3;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include responsive.md{
+                display: none;
+            }
+        img{
+            position: absolute;
+            right: 0;
+            width: 115%;
+            @include responsive.lg{
+                width: 105%;
+            }
+        }
+    }
+}
